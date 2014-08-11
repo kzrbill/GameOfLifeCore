@@ -10,7 +10,6 @@
 		BE25F421199954F200B62590 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE25F420199954F200B62590 /* Foundation.framework */; };
 		BE25F42F199954F200B62590 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE25F42E199954F200B62590 /* XCTest.framework */; };
 		BE25F430199954F200B62590 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE25F420199954F200B62590 /* Foundation.framework */; };
-		BE25F432199954F200B62590 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE25F431199954F200B62590 /* UIKit.framework */; };
 		BE25F435199954F200B62590 /* libGameOfLifeCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE25F41D199954F200B62590 /* libGameOfLifeCore.a */; };
 		BE25F43B199954F200B62590 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE25F439199954F200B62590 /* InfoPlist.strings */; };
 		BE25F45B1999559000B62590 /* GOLBlockCellCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BE25F44C1999559000B62590 /* GOLBlockCellCollection.m */; };
@@ -27,6 +26,15 @@
 		BE25F46C199955B500B62590 /* GOLPostionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE25F466199955B500B62590 /* GOLPostionTests.m */; };
 		BE25F46D199955B500B62590 /* GOLWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE25F467199955B500B62590 /* GOLWorldTests.m */; };
 		BE25F46E1999580300B62590 /* NSArray+GOLPositionsToCellCollections.m in Sources */ = {isa = PBXBuildFile; fileRef = BE25F4481999559000B62590 /* NSArray+GOLPositionsToCellCollections.m */; };
+		BE25F4DE1999679300B62590 /* NSArray+GOLPositionsToCellCollections.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BE25F4471999559000B62590 /* NSArray+GOLPositionsToCellCollections.h */; };
+		BE25F4DF1999679300B62590 /* GOLBlockCellCollection.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BE25F44B1999559000B62590 /* GOLBlockCellCollection.h */; };
+		BE25F4E01999679300B62590 /* GOLCellCollection.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BE25F44D1999559000B62590 /* GOLCellCollection.h */; };
+		BE25F4E11999679300B62590 /* GOLDeadCell.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BE25F4501999559000B62590 /* GOLDeadCell.h */; };
+		BE25F4E21999679300B62590 /* GOLLivingCell.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BE25F4521999559000B62590 /* GOLLivingCell.h */; };
+		BE25F4E31999679300B62590 /* GOLNeighborFinder.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BE25F4541999559000B62590 /* GOLNeighborFinder.h */; };
+		BE25F4E41999679300B62590 /* GOLPosition.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BE25F4561999559000B62590 /* GOLPosition.h */; };
+		BE25F4E51999679300B62590 /* GOLWorld.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BE25F4581999559000B62590 /* GOLWorld.h */; };
+		BEAC6F4819996DF200C9CFA1 /* GOLCellType.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BE25F44F1999559000B62590 /* GOLCellType.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +48,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BE25F41B199954F200B62590 /* CopyFiles */ = {
+		BE25F41B199954F200B62590 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				BEAC6F4819996DF200C9CFA1 /* GOLCellType.h in Copy Files */,
+				BE25F4DE1999679300B62590 /* NSArray+GOLPositionsToCellCollections.h in Copy Files */,
+				BE25F4DF1999679300B62590 /* GOLBlockCellCollection.h in Copy Files */,
+				BE25F4E01999679300B62590 /* GOLCellCollection.h in Copy Files */,
+				BE25F4E11999679300B62590 /* GOLDeadCell.h in Copy Files */,
+				BE25F4E21999679300B62590 /* GOLLivingCell.h in Copy Files */,
+				BE25F4E31999679300B62590 /* GOLNeighborFinder.h in Copy Files */,
+				BE25F4E41999679300B62590 /* GOLPosition.h in Copy Files */,
+				BE25F4E51999679300B62590 /* GOLWorld.h in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -57,7 +75,6 @@
 		BE25F424199954F200B62590 /* GameOfLifeCore-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameOfLifeCore-Prefix.pch"; sourceTree = "<group>"; };
 		BE25F42D199954F200B62590 /* GameOfLifeCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameOfLifeCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE25F42E199954F200B62590 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		BE25F431199954F200B62590 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		BE25F438199954F200B62590 /* GameOfLifeCoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GameOfLifeCoreTests-Info.plist"; sourceTree = "<group>"; };
 		BE25F43A199954F200B62590 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BE25F4471999559000B62590 /* NSArray+GOLPositionsToCellCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+GOLPositionsToCellCollections.h"; sourceTree = "<group>"; };
@@ -100,7 +117,6 @@
 			files = (
 				BE25F42F199954F200B62590 /* XCTest.framework in Frameworks */,
 				BE25F435199954F200B62590 /* libGameOfLifeCore.a in Frameworks */,
-				BE25F432199954F200B62590 /* UIKit.framework in Frameworks */,
 				BE25F430199954F200B62590 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,7 +148,6 @@
 			children = (
 				BE25F420199954F200B62590 /* Foundation.framework */,
 				BE25F42E199954F200B62590 /* XCTest.framework */,
-				BE25F431199954F200B62590 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -226,7 +241,7 @@
 			buildPhases = (
 				BE25F419199954F200B62590 /* Sources */,
 				BE25F41A199954F200B62590 /* Frameworks */,
-				BE25F41B199954F200B62590 /* CopyFiles */,
+				BE25F41B199954F200B62590 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -451,6 +466,12 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "GameOfLifeCoreTests/GameOfLifeCoreTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -467,6 +488,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GameOfLifeCore/GameOfLifeCore-Prefix.pch";
 				INFOPLIST_FILE = "GameOfLifeCoreTests/GameOfLifeCoreTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -491,6 +518,7 @@
 				BE25F442199954F200B62590 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE25F443199954F200B62590 /* Build configuration list for PBXNativeTarget "GameOfLifeCoreTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +527,7 @@
 				BE25F445199954F200B62590 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

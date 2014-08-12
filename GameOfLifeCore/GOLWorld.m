@@ -15,7 +15,7 @@
 
 @interface GOLWorld ()
 
-@property (nonatomic, strong) GOLCellCollection *cellCollection;
+@property (nonatomic, strong, readwrite) GOLCellCollection *cellCollection;
 
 @end
 

@@ -11,6 +11,8 @@
 
 @interface GOLWorld : NSObject
 
+@property (nonatomic, strong, readonly) GOLCellCollection *cellCollection;
+
 - (BOOL)isEmpty;
 - (void)seedWorldWithCells:(GOLCellCollection *)cellCollection;
 - (GOLWorld *)evolve;

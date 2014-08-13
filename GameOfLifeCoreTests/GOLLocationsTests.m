@@ -22,21 +22,21 @@
 - (void)testCellPositionCountMatchesNumberOfUniquePositionsSet;
 {
     // Arrange
-    GOLLocations *positionCollection = [[GOLLocations alloc] init];
+    GOLLocations *locations = [[GOLLocations alloc] init];
     
-    [positionCollection setLocationX:1 y:1 forCell:[self newCell]];
-    [positionCollection setLocationX:1 y:1 forCell:[self newCell]];
+    [locations setLocationX:1 y:1 forCell:[self newCell]];
+    [locations setLocationX:1 y:1 forCell:[self newCell]];
     
-    [positionCollection setLocationX:2 y:2 forCell:[self newCell]];
-    [positionCollection setLocationX:2 y:2 forCell:[self newCell]];
+    [locations setLocationX:2 y:2 forCell:[self newCell]];
+    [locations setLocationX:2 y:2 forCell:[self newCell]];
     
-    [positionCollection setLocationX:3 y:3 forCell:[self newCell]];
+    [locations setLocationX:3 y:3 forCell:[self newCell]];
     
     // Act
-    NSArray *positions = [positionCollection locations];
+    NSArray *locationsArray = [locations locations];
     
     // Assert
-    XCTAssertEqual([positions count], 3, @"Position count should be 3");
+    XCTAssertEqual([locationsArray count], 3, @"Position count should be 3");
 }
 
 - (GOLLivingCell *)newCell;

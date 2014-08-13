@@ -8,6 +8,7 @@
 
 #import "GOLLocations.h"
 #import "GOLLocation.h"
+#import "GOLCellType.h"
 
 @interface Location : NSObject
 @property (nonatomic, assign) NSInteger x;
@@ -33,7 +34,13 @@
 
 - (NSArray *)locations;
 {
-    return [self.locationKeyedCells allValues];
+    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:self.locationKeyedCells.count];
+
+    [self.locationKeyedCells enumerateKeysAndObjectsUsingBlock:^(NSString *key, id<GOLCellType> obj, BOOL *stop) {
+        [array addObject:[self locationFromKey:key]];
+    }];
+    
+    return [NSArray arrayWithArray:array];
 }
 
 - (NSString *)keyUsingX:(NSInteger)x y:(NSInteger)y;
@@ -47,7 +54,7 @@
     GOLLocation *location = [[GOLLocation alloc] init];
     location.x = [components[0] intValue];
     location.y = [components[1] intValue];
-    location = self.locationKeyedCells[key];
+    location.cell = self.locationKeyedCells[key];
     return location;
 }
 

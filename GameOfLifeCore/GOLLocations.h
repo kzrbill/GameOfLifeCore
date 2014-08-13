@@ -8,8 +8,9 @@
 
 #import "GOLCellCollection.h"
 
-@interface GOLPositionCollection : GOLCellCollection
+@interface GOLLocations : GOLCellCollection
 
-- (void)setCell:(id<GOLCellType>)cell y:(NSInteger)x y:y;
+- (void)setLocationX:(NSInteger)x y:(NSInteger)y forCell:(id<GOLCellType>)cell;
+- (NSArray *)locations;
 
 @end

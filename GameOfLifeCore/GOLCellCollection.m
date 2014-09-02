@@ -97,13 +97,6 @@
     return self.locationKeyedCells[key];
 }
 
-- (GOLCellCollection *)filteredCellCollectionUsingPredicate:(NSPredicate *)predicate;
-{
-    @throw [NSException exceptionWithName:NSInternalInconsistencyException
-                                   reason:@"Not implemented"
-                                 userInfo:nil];
-}
-
 - (BOOL)isEqual:(id)otherObject
 {
     if (![otherObject isKindOfClass:self.class])
@@ -122,6 +115,7 @@
 
 #pragma mark - NSFastEnumeration
 
+// TODO: Fix this returning string key in enumeration
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len;
 {
     return [self.locationKeyedCells countByEnumeratingWithState:state objects:buffer count:len];

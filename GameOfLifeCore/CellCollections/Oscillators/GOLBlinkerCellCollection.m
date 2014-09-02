@@ -20,9 +20,9 @@
 - (NSArray *)positions;
 {
     return @[
-             [[GOLLivingCell alloc] initWithPosition:[GOLPosition positionWithX:30 Y:29]],
-             [[GOLLivingCell alloc] initWithPosition:[GOLPosition positionWithX:30 Y:30]],
-             [[GOLLivingCell alloc] initWithPosition:[GOLPosition positionWithX:30 Y:31]],
+             [[GOLLivingCell alloc] initWithPosition:[GOLPosition positionWithX:15 Y:29]],
+             [[GOLLivingCell alloc] initWithPosition:[GOLPosition positionWithX:15 Y:30]],
+             [[GOLLivingCell alloc] initWithPosition:[GOLPosition positionWithX:15 Y:31]],
              ];
 }
 

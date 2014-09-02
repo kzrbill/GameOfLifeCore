@@ -7,10 +7,14 @@
 //
 
 #import "GOLCellCollection.h"
+#import "GOLCellType.h"
+#import "GOLPosition.h"
+
 
 @interface GOLCellCollection ()
 
-@property (nonatomic, strong) NSMutableArray *cells;
+@property (nonatomic, strong) NSMutableArray *indexes;
+@property (nonatomic, strong) NSMutableDictionary *locationKeyedCells;
 
 @end
 
@@ -22,16 +26,7 @@
 {
     self = [super init];
     if (self) {
-        _cells = [NSMutableArray arrayWithArray:cellArray];
-    }
-    return self;
-}
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _cells = [NSMutableArray array];
+        [self addCells:cellArray];
     }
     return self;
 }
@@ -41,36 +36,61 @@
     return [[GOLCellCollection alloc] initWithCellsArray:cellsArray];
 }
 
-#pragma mark -
+#pragma mark - Location based
 
-- (NSMutableArray *)cells
+- (void)setLocationX:(NSInteger)x y:(NSInteger)y forCell:(id<GOLCellType>)cell;
 {
-    if (!_cells){
-        _cells = [[NSMutableArray alloc] init];
-    }
-    
-    return _cells;
+    NSString *key = [self keyUsingX:x y:y];
+    self.locationKeyedCells[key] = cell;
+    [self.indexes addObject:key];
 }
+
+- (NSString *)keyUsingX:(NSInteger)x y:(NSInteger)y;
+{
+    return [NSString stringWithFormat:@"%ld|%ld", (long)x, (long)y];
+}
+
+- (NSMutableDictionary *)locationKeyedCells;
+{
+    return _locationKeyedCells = _locationKeyedCells ?: [[NSMutableDictionary alloc] init];
+}
+
+- (NSMutableArray *)indexes;
+{
+    return _indexes = _indexes ?: [[NSMutableArray alloc] init];
+}
+
+- (void)addCells:(NSArray *)cells;
+{
+    for (id<GOLCellType> cell in cells)
+    {
+        [self addCell:cell];
+    }
+}
+
+#pragma mark -
 
 - (void)addCell:(id<GOLCellType>)cell;
 {
-    [self.cells addObject:cell];
+    [self setLocationX:cell.position.x y:cell.position.y forCell:cell];
 }
 
 - (NSUInteger)count
 {
-    return [self.cells count];
+    return [self.locationKeyedCells count];
 }
 
 - (id<GOLCellType>)cellAtIndex:(NSUInteger)index;
 {
-    return [self.cells objectAtIndex:index];
+    NSString *key = self.indexes[index];
+    return self.locationKeyedCells[key];
 }
 
 - (GOLCellCollection *)filteredCellCollectionUsingPredicate:(NSPredicate *)predicate;
 {
-    NSArray *filteredCells = [self.cells filteredArrayUsingPredicate:predicate];
-    return [[GOLCellCollection alloc] initWithCellsArray:filteredCells];
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Not implemented"
+                                 userInfo:nil];
 }
 
 - (BOOL)isEqual:(id)otherObject
@@ -81,19 +101,19 @@
     }
     
     GOLCellCollection *otherCellCollection = otherObject;
-    return [self.cells isEqualToArray:otherCellCollection.cells];
+    return [self.locationKeyedCells isEqualToDictionary:otherCellCollection.locationKeyedCells];
 }
 
 - (NSUInteger)hash;
 {
-    return [self.cells hash];
+    return [self.locationKeyedCells hash];
 }
 
 #pragma mark - NSFastEnumeration
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len;
 {
-    return [self.cells countByEnumeratingWithState:state objects:buffer count:len];
+    return [self.locationKeyedCells countByEnumeratingWithState:state objects:buffer count:len];
 }
 
 #pragma mark -

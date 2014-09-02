@@ -41,12 +41,12 @@
     XCTAssertEqualObjects(expectedCell, actualCell, @"Expected cell did not equal actual cell");
 }
 
-- (void)testCountIsCorrectWhenAddedCells
+- (void)testCountIsCorrectWhenAddedCellsAtDifferentPositions
 {
     // Arrange
     GOLCellCollection *cellCollection = [[GOLCellCollection alloc] init];
     
-    GOLLivingCell *expectedCell1 = [[GOLLivingCell alloc] initWithPosition:[[GOLPosition alloc] initWithX:3 Y:5]];
+    GOLLivingCell *expectedCell1 = [[GOLLivingCell alloc] initWithPosition:[[GOLPosition alloc] initWithX:1 Y:5]];
     GOLLivingCell *expectedCell2 = [[GOLLivingCell alloc] initWithPosition:[[GOLPosition alloc] initWithX:3 Y:5]];
     [cellCollection addCell:expectedCell1];
     [cellCollection addCell:expectedCell2];

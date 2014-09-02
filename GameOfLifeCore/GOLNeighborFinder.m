@@ -58,8 +58,19 @@
     if (_livingCellNeighbors)
         return _livingCellNeighbors;
     
-    NSPredicate *predicate = [NSCompoundPredicate orPredicateWithSubpredicates:self.livingCellSearchPredicates];
-    return _livingCellNeighbors = [self.worldCellCollection filteredCellCollectionUsingPredicate:predicate];
+    _livingCellNeighbors = [[GOLCellCollection alloc] init];
+    
+    for (GOLPosition *neighborPosition in self.neighborPositions)
+    {
+        bool hasCellAtLocation = [self.worldCellCollection cellAtX:neighborPosition.x y:neighborPosition.y] != nil;
+        if (!hasCellAtLocation)
+            continue;
+        
+        GOLLivingCell *livingCell = [[GOLLivingCell alloc] initWithPosition:neighborPosition];
+        [_livingCellNeighbors addCell:livingCell];
+    }
+    
+    return _livingCellNeighbors;
 }
 
 - (GOLCellCollection *)deadCellNeighbors;
@@ -69,13 +80,10 @@
     
     _deadCellNeighbors = [[GOLCellCollection alloc] init];
     
-    // Quicker - more concise way of doing this?
     for (GOLPosition *neighborPosition in self.neighborPositions)
     {
-        NSPredicate *predicate = [self predicateForLivingCellAtPosition:neighborPosition];
-        GOLCellCollection *cellCollection = [self.worldCellCollection filteredCellCollectionUsingPredicate:predicate];
-        
-        if (cellCollection.count > 0)
+        bool hasCellAtLocation = [self.worldCellCollection cellAtX:neighborPosition.x y:neighborPosition.y] != nil;
+        if (hasCellAtLocation)
             continue;
         
         GOLDeadCell *deadCell = [[GOLDeadCell alloc] initWithPosition:neighborPosition];
@@ -104,29 +112,6 @@
                            ];
     
     return _neighborPositions;
-}
-
-- (NSArray *)livingCellSearchPredicates;
-{
-    if (_livingCellSearchPredicates)
-        return _livingCellSearchPredicates;
-    
-    NSMutableArray *livingCellPredicates = [[NSMutableArray alloc] init];
-    
-    for (GOLPosition *neighborPosition in self.neighborPositions)
-    {
-        NSPredicate *predicate = [self predicateForLivingCellAtPosition:neighborPosition];
-        [livingCellPredicates addObject:predicate];
-    }
-    
-    return _livingCellSearchPredicates = [NSArray arrayWithArray:livingCellPredicates];
-}
-
-- (NSPredicate *)predicateForLivingCellAtPosition:(GOLPosition *)position;
-{
-    return [NSPredicate predicateWithBlock:^BOOL(GOLLivingCell *cell, NSDictionary *bindings) {
-        return (cell.position.x == position.x) && (cell.position.y == position.y);
-    }];
 }
 
 @end

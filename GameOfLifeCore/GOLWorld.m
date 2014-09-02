@@ -36,8 +36,10 @@
 {
     GOLCellCollection *evolvedCellCollection = [[GOLCellCollection alloc] init];
     
-    for (id<GOLCellType> cell in self.cellCollection)
+    for (NSString *key in self.cellCollection)
     {
+        id<GOLCellType> cell = [self.cellCollection cellByKey:key];
+        
         GOLNeighborFinder *neighborFinder = [[GOLNeighborFinder alloc] initWithLivingCellCollection:self.cellCollection centerPosition:cell.position];
         
         Byte livingNeighborCellCount = [[neighborFinder livingNeighbors] count];
@@ -47,8 +49,11 @@
             [evolvedCellCollection addCell:cell];
         }
         
-        for (GOLDeadCell *deadCell in [neighborFinder deadNeighbors])
+        GOLCellCollection *deadCellCollection = [neighborFinder deadNeighbors];
+        for (NSString *deadCellKey in deadCellCollection)
         {
+            GOLDeadCell *deadCell = [deadCellCollection cellByKey:deadCellKey];
+            
             GOLNeighborFinder *neighborFinder = [[GOLNeighborFinder alloc] initWithLivingCellCollection:self.cellCollection centerPosition:deadCell.position];
             
             Byte livingNeighborCellCount = [[neighborFinder livingNeighbors] count];

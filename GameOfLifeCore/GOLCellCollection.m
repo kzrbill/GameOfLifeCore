@@ -92,6 +92,11 @@
     return self.locationKeyedCells[key];
 }
 
+- (id<GOLCellType>)cellByKey:(NSString *)key;
+{
+    return self.locationKeyedCells[key];
+}
+
 - (GOLCellCollection *)filteredCellCollectionUsingPredicate:(NSPredicate *)predicate;
 {
     @throw [NSException exceptionWithName:NSInternalInconsistencyException

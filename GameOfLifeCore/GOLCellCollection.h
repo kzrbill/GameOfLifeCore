@@ -16,5 +16,6 @@
 - (NSUInteger)count;
 - (id<GOLCellType>)cellAtIndex:(NSUInteger)index;
 - (id<GOLCellType>)cellAtX:(NSInteger)x y:(NSInteger)y;
+- (id<GOLCellType>)cellByKey:(NSString *)key; // Should not be publicly exposed. Need to sort face enumeration so does not work by key, rather return the cell.
 - (GOLCellCollection *)filteredCellCollectionUsingPredicate:(NSPredicate *)predicate;
 @end

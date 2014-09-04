@@ -21,18 +21,32 @@
 
 @implementation GOLCellCollection
 
-#pragma mark - Initialaliser
+#pragma mark - Public
 
-- (instancetype)initWithCellsArray:(NSArray *)cellArray
+
+- (void)addLivingAtX:(NSInteger)x y:(NSInteger)y;
 {
-    self = [super init];
-    if (self) {
-        [self addCells:cellArray];
-    }
-    return self;
+    GOLLivingCell *cell = [GOLLivingCell cellWithPosition:[GOLPosition positionWithX:x Y:y]];
+    [self setLocationX:cell.position.x y:cell.position.y forCell:cell];
 }
 
-#pragma mark - Location based
+- (void)addCell:(id<GOLCellType>)cell;
+{
+    [self setLocationX:cell.position.x y:cell.position.y forCell:cell];
+}
+
+- (id<GOLCellType>)cellAtX:(NSInteger)x y:(NSInteger)y;
+{
+    NSString *key = [self keyUsingX:x y:y];
+    return self.locationKeyedCells[key];
+}
+
+- (id<GOLCellType>)cellByKey:(NSString *)key;
+{
+    return self.locationKeyedCells[key];
+}
+
+#pragma mark - Private
 
 - (void)setLocationX:(NSInteger)x y:(NSInteger)y forCell:(id<GOLCellType>)cell;
 {
@@ -56,48 +70,7 @@
     return _indexes = _indexes ?: [[NSMutableArray alloc] init];
 }
 
-- (void)addCells:(NSArray *)cells;
-{
-    for (id<GOLCellType> cell in cells)
-    {
-        [self addCell:cell];
-    }
-}
-
-#pragma mark -
-
-- (void)addLivingAtX:(NSInteger)x y:(NSInteger)y;
-{
-    GOLLivingCell *cell = [GOLLivingCell cellWithPosition:[GOLPosition positionWithX:x Y:y]];
-    [self setLocationX:cell.position.x y:cell.position.y forCell:cell];
-}
-
-- (void)addCell:(id<GOLCellType>)cell;
-{
-    [self setLocationX:cell.position.x y:cell.position.y forCell:cell];
-}
-
-- (NSUInteger)count
-{
-    return [self.locationKeyedCells count];
-}
-
-- (id<GOLCellType>)cellAtIndex:(NSUInteger)index;
-{
-    NSString *key = self.indexes[index];
-    return self.locationKeyedCells[key];
-}
-
-- (id<GOLCellType>)cellAtX:(NSInteger)x y:(NSInteger)y;
-{
-    NSString *key = [self keyUsingX:x y:y];
-    return self.locationKeyedCells[key];
-}
-
-- (id<GOLCellType>)cellByKey:(NSString *)key;
-{
-    return self.locationKeyedCells[key];
-}
+#pragma mark - Equality
 
 - (BOOL)isEqual:(id)otherObject
 {
@@ -116,6 +89,11 @@
 }
 
 #pragma mark - NSFastEnumeration
+
+- (NSUInteger)count
+{
+    return [self.locationKeyedCells count];
+}
 
 // TODO: Fix this returning string key in enumeration
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len;

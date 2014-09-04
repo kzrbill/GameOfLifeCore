@@ -36,7 +36,7 @@
     [cellCollection addCell:expectedCell];
     
     // Assert
-    GOLLivingCell *actualCell = [cellCollection cellAtIndex:0];
+    GOLLivingCell *actualCell = [cellCollection cellAtX:3 y:3];
     
     XCTAssertEqualObjects(expectedCell, actualCell, @"Expected cell did not equal actual cell");
 }

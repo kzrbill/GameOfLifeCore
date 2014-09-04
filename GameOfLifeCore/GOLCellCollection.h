@@ -11,13 +11,11 @@
 
 @interface GOLCellCollection : NSObject <NSFastEnumeration>
 
-- (instancetype)initWithCellsArray:(NSArray *)cellArray; 
 - (void)addCell:(id<GOLCellType>)cell;
 - (void)addLivingAtX:(NSInteger)x y:(NSInteger)y;
 - (id<GOLCellType>)cellAtX:(NSInteger)x y:(NSInteger)y;
 
-#pragma mark - Enumeration
+#pragma mark - Fast enumeration
 - (NSUInteger)count;
-- (id<GOLCellType>)cellAtIndex:(NSUInteger)index; // Only exists to support tests. Could remove.
 - (id<GOLCellType>)cellByKey:(NSString *)key; // Key Should not be publicly exposed. Need to sort face enumeration so does not work by key, rather return the cell.
 @end

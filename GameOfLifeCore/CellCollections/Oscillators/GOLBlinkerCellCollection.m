@@ -14,16 +14,13 @@
 
 - (instancetype)init
 {
-    return [self initWithCellsArray:[self positions]];
-}
-
-- (NSArray *)positions;
-{
-    return @[
-             [[GOLLivingCell alloc] initWithPosition:[GOLPosition positionWithX:15 Y:29]],
-             [[GOLLivingCell alloc] initWithPosition:[GOLPosition positionWithX:15 Y:30]],
-             [[GOLLivingCell alloc] initWithPosition:[GOLPosition positionWithX:15 Y:31]],
-             ];
+    self = [super init];
+    if (self) {
+        [self addLivingAtX:0 y:0];
+        [self addLivingAtX:0 y:1];
+        [self addLivingAtX:0 y:2];
+    }
+    return self;
 }
 
 @end

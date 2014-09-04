@@ -9,6 +9,7 @@
 #import "GOLCellCollection.h"
 #import "GOLCellType.h"
 #import "GOLPosition.h"
+#import "GOLLivingCell.h"
 
 
 @interface GOLCellCollection ()
@@ -29,11 +30,6 @@
         [self addCells:cellArray];
     }
     return self;
-}
-
-+ (instancetype)collectionWithCellsArray:(NSArray *)cellsArray
-{
-    return [[GOLCellCollection alloc] initWithCellsArray:cellsArray];
 }
 
 #pragma mark - Location based
@@ -69,6 +65,12 @@
 }
 
 #pragma mark -
+
+- (void)addLivingAtX:(NSInteger)x y:(NSInteger)y;
+{
+    GOLLivingCell *cell = [GOLLivingCell cellWithPosition:[GOLPosition positionWithX:x Y:y]];
+    [self setLocationX:cell.position.x y:cell.position.y forCell:cell];
+}
 
 - (void)addCell:(id<GOLCellType>)cell;
 {

@@ -13,9 +13,11 @@
 
 - (instancetype)initWithCellsArray:(NSArray *)cellArray; 
 - (void)addCell:(id<GOLCellType>)cell;
-- (NSUInteger)count;
-- (id<GOLCellType>)cellAtIndex:(NSUInteger)index;
+- (void)addLivingAtX:(NSInteger)x y:(NSInteger)y;
 - (id<GOLCellType>)cellAtX:(NSInteger)x y:(NSInteger)y;
-- (id<GOLCellType>)cellByKey:(NSString *)key; // Should not be publicly exposed. Need to sort face enumeration so does not work by key, rather return the cell.
-- (GOLCellCollection *)filteredCellCollectionUsingPredicate:(NSPredicate *)predicate;
+
+#pragma mark - Enumeration
+- (NSUInteger)count;
+- (id<GOLCellType>)cellAtIndex:(NSUInteger)index; // Only exists to support tests. Could remove.
+- (id<GOLCellType>)cellByKey:(NSString *)key; // Key Should not be publicly exposed. Need to sort face enumeration so does not work by key, rather return the cell.
 @end

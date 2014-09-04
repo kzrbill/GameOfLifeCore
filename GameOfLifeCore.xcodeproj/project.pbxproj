@@ -37,9 +37,6 @@
 		BEAC6F4819996DF200C9CFA1 /* GOLCellType.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BE25F44F1999559000B62590 /* GOLCellType.h */; };
 		BEC250A1199ABB4A00C0459C /* GOLBlinkerCellCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC250A0199ABB4A00C0459C /* GOLBlinkerCellCollection.m */; };
 		BEC250A3199ABBC800C0459C /* GOLBlinkerCellCollection.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BEC2509F199ABB4A00C0459C /* GOLBlinkerCellCollection.h */; };
-		BEDA714C199BC836006FFDD0 /* GOLLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDA714B199BC836006FFDD0 /* GOLLocations.m */; };
-		BEDA714E199BCDDE006FFDD0 /* GOLLocationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDA714D199BCDDE006FFDD0 /* GOLLocationsTests.m */; };
-		BEDA7151199C0242006FFDD0 /* GOLLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDA7150199C0242006FFDD0 /* GOLLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,11 +105,6 @@
 		BE25F467199955B500B62590 /* GOLWorldTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLWorldTests.m; sourceTree = "<group>"; };
 		BEC2509F199ABB4A00C0459C /* GOLBlinkerCellCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLBlinkerCellCollection.h; path = Oscillators/GOLBlinkerCellCollection.h; sourceTree = "<group>"; };
 		BEC250A0199ABB4A00C0459C /* GOLBlinkerCellCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLBlinkerCellCollection.m; path = Oscillators/GOLBlinkerCellCollection.m; sourceTree = "<group>"; };
-		BEDA714A199BC836006FFDD0 /* GOLLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLLocations.h; path = GameOfLifeCore/GOLLocations.h; sourceTree = SOURCE_ROOT; };
-		BEDA714B199BC836006FFDD0 /* GOLLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLLocations.m; path = GameOfLifeCore/GOLLocations.m; sourceTree = SOURCE_ROOT; };
-		BEDA714D199BCDDE006FFDD0 /* GOLLocationsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLLocationsTests.m; sourceTree = "<group>"; };
-		BEDA714F199C0242006FFDD0 /* GOLLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOLLocation.h; sourceTree = "<group>"; };
-		BEDA7150199C0242006FFDD0 /* GOLLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLLocation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +162,6 @@
 			children = (
 				BE25F4461999559000B62590 /* Categories */,
 				BE25F4491999559000B62590 /* CellCollections */,
-				BEDA714F199C0242006FFDD0 /* GOLLocation.h */,
-				BEDA7150199C0242006FFDD0 /* GOLLocation.m */,
 				BE25F44D1999559000B62590 /* GOLCellCollection.h */,
 				BE25F44E1999559000B62590 /* GOLCellCollection.m */,
 				BE25F44F1999559000B62590 /* GOLCellType.h */,
@@ -201,7 +191,6 @@
 		BE25F436199954F200B62590 /* GameOfLifeCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				BEDA714D199BCDDE006FFDD0 /* GOLLocationsTests.m */,
 				BE25F462199955B500B62590 /* GOLCellCollectionTests.m */,
 				BE25F463199955B500B62590 /* GOLDeadCellTests.m */,
 				BE25F464199955B500B62590 /* GOLLivingCellTests.m */,
@@ -234,8 +223,6 @@
 		BE25F4491999559000B62590 /* CellCollections */ = {
 			isa = PBXGroup;
 			children = (
-				BEDA714A199BC836006FFDD0 /* GOLLocations.h */,
-				BEDA714B199BC836006FFDD0 /* GOLLocations.m */,
 				BEC250A2199ABB5000C0459C /* Oscillators */,
 				BE25F44A1999559000B62590 /* StillLifes */,
 			);
@@ -342,9 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC250A1199ABB4A00C0459C /* GOLBlinkerCellCollection.m in Sources */,
-				BEDA714C199BC836006FFDD0 /* GOLLocations.m in Sources */,
 				BE25F46E1999580300B62590 /* NSArray+GOLPositionsToCellCollections.m in Sources */,
-				BEDA7151199C0242006FFDD0 /* GOLLocation.m in Sources */,
 				BE25F45D1999559000B62590 /* GOLDeadCell.m in Sources */,
 				BE25F45B1999559000B62590 /* GOLBlockCellCollection.m in Sources */,
 				BE25F45F1999559000B62590 /* GOLNeighborFinder.m in Sources */,
@@ -363,7 +348,6 @@
 				BE25F46D199955B500B62590 /* GOLWorldTests.m in Sources */,
 				BE25F469199955B500B62590 /* GOLDeadCellTests.m in Sources */,
 				BE25F46B199955B500B62590 /* GOLNeighborFinderTests.m in Sources */,
-				BEDA714E199BCDDE006FFDD0 /* GOLLocationsTests.m in Sources */,
 				BE25F468199955B500B62590 /* GOLCellCollectionTests.m in Sources */,
 				BE25F46C199955B500B62590 /* GOLPostionTests.m in Sources */,
 			);

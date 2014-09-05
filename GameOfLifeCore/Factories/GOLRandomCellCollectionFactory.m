@@ -51,7 +51,9 @@
 
 - (NSInteger)randomNumberFromRange:(NSRange)range;
 {
-    return arc4random_uniform(range.location) + range.length;
+    NSInteger lower = range.location;
+    NSInteger upper = range.length;
+    return lower + arc4random() % (upper - lower);
 }
 
 @end

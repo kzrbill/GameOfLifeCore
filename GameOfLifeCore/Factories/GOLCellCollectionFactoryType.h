@@ -1,5 +1,5 @@
 //
-//  CellCollectionFactory.h
+//  GOLCellCollectionFactoryType.h
 //  GameOfLifeCore
 //
 //  Created by Will Grange on 05/09/2014.
@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface GOLRandomCellFactory : NSObject
+@class GOLCellCollection;
+
+@protocol GOLCellCollectionFactoryType <NSObject>
+
+- (GOLCellCollection *)generateCollection;
 
 @end

@@ -34,7 +34,7 @@
 		BE25F4E31999679300B62590 /* GOLNeighborFinder.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BE25F4541999559000B62590 /* GOLNeighborFinder.h */; };
 		BE25F4E41999679300B62590 /* GOLPosition.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BE25F4561999559000B62590 /* GOLPosition.h */; };
 		BE25F4E51999679300B62590 /* GOLWorld.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BE25F4581999559000B62590 /* GOLWorld.h */; };
-		BE2B253F19BA3FE600E7A135 /* GOLRandomCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2B253E19BA3FE600E7A135 /* GOLRandomCellFactory.m */; };
+		BE2B253F19BA3FE600E7A135 /* GOLRandomCellCollectionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2B253E19BA3FE600E7A135 /* GOLRandomCellCollectionFactory.m */; };
 		BE2B254119BA406E00E7A135 /* GOLRandomCellFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2B254019BA406E00E7A135 /* GOLRandomCellFactoryTests.m */; };
 		BEAC6F4819996DF200C9CFA1 /* GOLCellType.h in Copy Files */ = {isa = PBXBuildFile; fileRef = BE25F44F1999559000B62590 /* GOLCellType.h */; };
 		BEC250A1199ABB4A00C0459C /* GOLBlinkerCellCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC250A0199ABB4A00C0459C /* GOLBlinkerCellCollection.m */; };
@@ -105,9 +105,10 @@
 		BE25F465199955B500B62590 /* GOLNeighborFinderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLNeighborFinderTests.m; sourceTree = "<group>"; };
 		BE25F466199955B500B62590 /* GOLPostionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLPostionTests.m; sourceTree = "<group>"; };
 		BE25F467199955B500B62590 /* GOLWorldTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLWorldTests.m; sourceTree = "<group>"; };
-		BE2B253D19BA3FE600E7A135 /* GOLRandomCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLRandomCellFactory.h; path = Factories/GOLRandomCellFactory.h; sourceTree = "<group>"; };
-		BE2B253E19BA3FE600E7A135 /* GOLRandomCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLRandomCellFactory.m; path = Factories/GOLRandomCellFactory.m; sourceTree = "<group>"; };
+		BE2B253D19BA3FE600E7A135 /* GOLRandomCellCollectionFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLRandomCellCollectionFactory.h; path = Factories/GOLRandomCellCollectionFactory.h; sourceTree = "<group>"; };
+		BE2B253E19BA3FE600E7A135 /* GOLRandomCellCollectionFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLRandomCellCollectionFactory.m; path = Factories/GOLRandomCellCollectionFactory.m; sourceTree = "<group>"; };
 		BE2B254019BA406E00E7A135 /* GOLRandomCellFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLRandomCellFactoryTests.m; sourceTree = "<group>"; };
+		BE2B254219BA44B800E7A135 /* GOLCellCollectionFactoryType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GOLCellCollectionFactoryType.h; path = Factories/GOLCellCollectionFactoryType.h; sourceTree = "<group>"; };
 		BEC2509F199ABB4A00C0459C /* GOLBlinkerCellCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLBlinkerCellCollection.h; path = Oscillators/GOLBlinkerCellCollection.h; sourceTree = "<group>"; };
 		BEC250A0199ABB4A00C0459C /* GOLBlinkerCellCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLBlinkerCellCollection.m; path = Oscillators/GOLBlinkerCellCollection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,8 +249,9 @@
 		BE2B253C19BA3F9300E7A135 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				BE2B253D19BA3FE600E7A135 /* GOLRandomCellFactory.h */,
-				BE2B253E19BA3FE600E7A135 /* GOLRandomCellFactory.m */,
+				BE2B253D19BA3FE600E7A135 /* GOLRandomCellCollectionFactory.h */,
+				BE2B253E19BA3FE600E7A135 /* GOLRandomCellCollectionFactory.m */,
+				BE2B254219BA44B800E7A135 /* GOLCellCollectionFactoryType.h */,
 			);
 			name = Factories;
 			sourceTree = "<group>";
@@ -352,7 +354,7 @@
 				BE25F45E1999559000B62590 /* GOLLivingCell.m in Sources */,
 				BE25F4601999559000B62590 /* GOLPosition.m in Sources */,
 				BE25F45C1999559000B62590 /* GOLCellCollection.m in Sources */,
-				BE2B253F19BA3FE600E7A135 /* GOLRandomCellFactory.m in Sources */,
+				BE2B253F19BA3FE600E7A135 /* GOLRandomCellCollectionFactory.m in Sources */,
 				BE25F4611999559000B62590 /* GOLWorld.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

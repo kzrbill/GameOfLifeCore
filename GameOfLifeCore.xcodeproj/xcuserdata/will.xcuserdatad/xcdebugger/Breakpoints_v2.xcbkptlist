@@ -2,4 +2,182 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GameOfLifeCoreTests/GOLCellCollectionTests.m"
+            timestampString = "440022135.525174"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-testCanAddANewCellToTheCollection"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GOLCellCollectionTests testCanAddANewCellToTheCollection]"
+                  moduleName = "GameOfLifeCoreTests"
+                  urlString = "file:///Users/will/src/objective-c/GameOfLifeCore/GameOfLifeCoreTests/GOLCellCollectionTests.m"
+                  timestampString = "440023132.423103"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "378">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GOLCellCollectionTests testCanAddANewCellToTheCollection]"
+                  moduleName = "GameOfLifeCoreTests"
+                  urlString = "file:///Users/will/src/objective-c/GameOfLifeCore/GameOfLifeCoreTests/GOLCellCollectionTests.m"
+                  timestampString = "440023132.423233"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "994">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GOLCellCollectionTests testCanAddANewCellToTheCollection]"
+                  moduleName = "GameOfLifeCoreTests"
+                  urlString = "file:///Users/will/src/objective-c/GameOfLifeCore/GameOfLifeCoreTests/GOLCellCollectionTests.m"
+                  timestampString = "440023132.423412"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "1122">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GOLCellCollectionTests testCanAddANewCellToTheCollection]"
+                  moduleName = "GameOfLifeCoreTests"
+                  urlString = "file:///Users/will/src/objective-c/GameOfLifeCore/GameOfLifeCoreTests/GOLCellCollectionTests.m"
+                  timestampString = "440023132.423581"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "1609">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GameOfLifeCoreTests/GOLNeighborFinderTests.m"
+            timestampString = "440022610.970972"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "-testDeadCellNeighborCountIs7WhenCheckingFromTopLeftOfBlockCells"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GOLNeighborFinderTests testDeadCellNeighborCountIs7WhenCheckingFromTopLeftOfBlockCells]"
+                  moduleName = "GameOfLifeCoreTests"
+                  urlString = "file:///Users/will/src/objective-c/GameOfLifeCore/GameOfLifeCoreTests/GOLNeighborFinderTests.m"
+                  timestampString = "440022961.211976"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "231">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GOLNeighborFinderTests testDeadCellNeighborCountIs7WhenCheckingFromTopLeftOfBlockCells]"
+                  moduleName = "GameOfLifeCoreTests"
+                  urlString = "file:///Users/will/src/objective-c/GameOfLifeCore/GameOfLifeCoreTests/GOLNeighborFinderTests.m"
+                  timestampString = "440022961.212061"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GOLNeighborFinderTests testDeadCellNeighborCountIs7WhenCheckingFromTopLeftOfBlockCells]"
+                  moduleName = "GameOfLifeCoreTests"
+                  urlString = "file:///Users/will/src/objective-c/GameOfLifeCore/GameOfLifeCoreTests/GOLNeighborFinderTests.m"
+                  timestampString = "440022961.212148"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "297">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GOLNeighborFinderTests testDeadCellNeighborCountIs7WhenCheckingFromTopLeftOfBlockCells]"
+                  moduleName = "GameOfLifeCoreTests"
+                  urlString = "file:///Users/will/src/objective-c/GameOfLifeCore/GameOfLifeCoreTests/GOLNeighborFinderTests.m"
+                  timestampString = "440022961.212232"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "985">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GOLNeighborFinderTests testDeadCellNeighborCountIs7WhenCheckingFromTopLeftOfBlockCells]"
+                  moduleName = "GameOfLifeCoreTests"
+                  urlString = "file:///Users/will/src/objective-c/GameOfLifeCore/GameOfLifeCoreTests/GOLNeighborFinderTests.m"
+                  timestampString = "440022961.212316"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "1099">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GOLNeighborFinderTests testDeadCellNeighborCountIs7WhenCheckingFromTopLeftOfBlockCells]"
+                  moduleName = "GameOfLifeCoreTests"
+                  urlString = "file:///Users/will/src/objective-c/GameOfLifeCore/GameOfLifeCoreTests/GOLNeighborFinderTests.m"
+                  timestampString = "440022961.212397"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "1227">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

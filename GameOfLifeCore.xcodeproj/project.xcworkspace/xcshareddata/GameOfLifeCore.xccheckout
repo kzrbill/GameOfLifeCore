@@ -10,29 +10,29 @@
 	<string>GameOfLifeCore</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>0A879CE3-ADCD-4A7D-8E29-8DEEC085FFA8</key>
-		<string>ssh://github.com/kzrbill/GameOfLifeCore.git</string>
+		<key>7EDFD4F4F521767596D19FE64968B03DD6440B0F</key>
+		<string>github.com:kzrbill/GameOfLifeCore.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GameOfLifeCore.xcodeproj/project.xcworkspace</string>
+	<string>GameOfLifeCore.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0A879CE3-ADCD-4A7D-8E29-8DEEC085FFA8</key>
+		<key>7EDFD4F4F521767596D19FE64968B03DD6440B0F</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/kzrbill/GameOfLifeCore.git</string>
+	<string>github.com:kzrbill/GameOfLifeCore.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0A879CE3-ADCD-4A7D-8E29-8DEEC085FFA8</string>
+	<string>7EDFD4F4F521767596D19FE64968B03DD6440B0F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0A879CE3-ADCD-4A7D-8E29-8DEEC085FFA8</string>
+			<string>7EDFD4F4F521767596D19FE64968B03DD6440B0F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>GameOfLifeCore</string>
 		</dict>

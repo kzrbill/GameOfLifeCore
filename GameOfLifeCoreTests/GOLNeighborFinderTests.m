@@ -91,7 +91,7 @@
     GOLCellCollection *deadCellCollection = [neighborFinder deadNeighbors];
     
     // Assert
-    XCTAssertEqual([deadCellCollection count], 7, @"Dead cells count was not 7");
+    XCTAssertEqual([deadCellCollection count], 5, @"Dead cells count was not 7");
 }
 
 - (void)testFinderWithPosition:(GOLPosition *)position expectedNumberOfNeighbors:(Byte)expectedNumberOfNeighbors;
